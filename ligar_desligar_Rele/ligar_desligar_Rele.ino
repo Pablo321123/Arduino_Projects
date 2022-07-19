@@ -13,21 +13,11 @@ void setup() {
 }
 
 void loop() {
-  //digitalRead(2); //Ler a entrada do pino 2
+  //digitalRead(2); //Ler a entrada do pino 2 (entrada 5v do arduino = 1 'Ligado')
   digitalWrite(LED,  !digitalRead(2)); //digitalWrite(13, oque escrever (ligar ou desligar))
   digitalWrite(rele, digitalRead(2)); // A shield de rele liga em 0 volts!!
 
   sprintf(texto, digitalRead(2) ? "Desligado: %d" : "Ligado: %d", digitalRead(2));
-  Serial.println(texto);
-
-//  if( digitalRead(2) == 0){    
-//      sprintf(texto, "Desligado: %d", digitalRead(2))
-//      Serial.println("Desligado")      
-//  } else{
-//      sprintf(texto, "Desligado: %d", digitalRead(2))
-//      Serial.println("Desligado")
-//  }
-
-  
+  Serial.println(texto); 
 
 }

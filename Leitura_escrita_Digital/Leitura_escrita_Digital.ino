@@ -4,8 +4,6 @@ void setup() {
    pinMode(2, INPUT_PULLUP); //pinMode esecifica a função do pino
                             // INPUT_PUllUP liga o resistor interno do arduino de modo a especificar sua saida inicial (sem flutuações)
    pinMode(LED, OUTPUT);
-
-   
 }
 
 void loop() {
