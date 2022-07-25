@@ -1,0 +1,5 @@
+{
+    "sketch": "Alarme.ino",
+    "board": "arduino:avr:uno",
+    "port": "COM5"
+}
