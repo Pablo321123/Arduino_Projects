@@ -24,7 +24,7 @@ void horizontalScroll(String texto, byte index, int linha) {
       break;
     } else {
       lcd.setCursor(0, linha);
-      String impressao = texto.substring(index) + texto.substring(index, 0);
+      String impressao = texto.substring(index) + texto.substring(0, index);
       lcd.print(impressao);
       delay(750);
       index++;
@@ -70,9 +70,10 @@ void loop() {
     {
       lcd.clear();
       leitura = Serial.readString();
+      byte tamanho = leitura.length();
+
       Serial.println(leitura);
 
-      byte tamanho = leitura.length();
 
       if (tamanho >= 16) {
         // for (byte i = 0; i < tamanho; i++)
